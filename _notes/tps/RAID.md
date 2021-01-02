@@ -20,7 +20,27 @@ Essendo che la scrittura deve essere doppia, non si ha un vantaggio; mentre nell
 ![](../../assets/img/tps/raid1-20210102180236.png)
 
 ## RAID 2
-Il RAID di livello 2 esegue una duplicazione di tutti i dati su ulteriori dischi.
-Essendo che la scrittura deve essere doppia, non si ha un vantaggio; mentre nella lettura il carico può essere distribuito tra le due copie.
+Il RAID di livello 2 lavora su word/byte, non su strisce di settori.
+
+Vengono distribuite word di 7 bit contenenti 4 bit di dati e 3 bit per l'ECC (Hamming code) su ogni disco.
 
 ![](../../assets/img/tps/raid2-20210102180539.png)
+
+## RAID 3
+Il RAID di livello 3 è una versione semplificata del RAID 2.
+Le word vengono distribuite sui dischi, e por ogni word viene calcolato un ECC, scritto nell'ultimo disco.
+
+Questo permette di recuperare i dati se un disco smette di funzionare.
+
+![](../../assets/img/tps/raid3-20210102181213.png)
+
+## RAID 4
+Il RAID di livello 4 lavora con _strip_ di settori e quindi non richiede dischi sincronizzati (a differenza del RAID 2 e 3).
+Nell'ultimo disco vengono salvati gli ECC di ogni strip.
+
+![](../../assets/img/tps/raid4-20210102181316.png)
+
+## RAID 5
+Il RAID di livello 5 è identico al RAID 4 ma distribuisce gli ECC sui vari dischi.
+
+![](../../assets/img/tps/raid5-20210102181400.png)

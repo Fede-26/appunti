@@ -9,7 +9,6 @@ season: winter
 ## Dischi magnetici
 ## Dischi IDE
 ## Dischi SCSI
-## RAID
 ## SSD
 ## CD-ROM
 ## CD-Recordable
