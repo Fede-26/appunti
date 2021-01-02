@@ -1,0 +1,108 @@
+{
+  "main": {
+    "id": "4175e0285eae6466",
+    "type": "split",
+    "children": [
+      {
+        "id": "c8e1755b554ad0d5",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0c3b3052be7b525c",
+    "type": "split",
+    "children": [
+      {
+        "id": "fece1fd5649f332a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e5c191631172adbc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "946a7ed5d514151e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e165b87697cbb582",
+    "type": "split",
+    "children": [
+      {
+        "id": "abdf9f0aedd70715",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6de4069cab66d1fa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b8a042052d632230",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "_notes/How-to-setup-this-site.md",
+    "_notes/Obsidian integration.md",
+    "_notes/How to use the special features.md",
+    "_notes/how-markdown-is-rendered.md",
+    "_notes/tps/Sistemi operativi.md",
+    "_notes/tps/Processore.md",
+    "_notes/tps/Assembly.md",
+    "_notes/Untitled.md",
+    "dates.md",
+    "about.md"
+  ]
+}
