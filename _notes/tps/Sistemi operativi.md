@@ -1,6 +1,6 @@
 ---
 title: Sistemi operativi
-tags: Memoria
+tags: Tps,OS,Memoria
 toc: true
 season: winter
 ---

@@ -1,6 +1,6 @@
 ---
 title: Processore
-tags: Registri,CPU
+tags: Tps,Registri,CPU
 toc: true
 season: winter
 ---

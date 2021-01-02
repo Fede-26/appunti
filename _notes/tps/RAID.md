@@ -1,6 +1,6 @@
 ---
 title: RAID
-tags: Dischi
+tags: Tps,Dischi
 toc: true
 season: winter
 ---

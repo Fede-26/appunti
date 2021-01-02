@@ -1,6 +1,6 @@
 ---
 title: Assembly
-tags: Assembly,Registri,CPU
+tags: Tps,Assembly,Registri,CPU
 toc: true
 season: winter
 ---
@@ -51,7 +51,7 @@ Z       DD 1, 2, 3      ;dichiara 3 variabili da 4 byte ciascuna,
 bytes   DB 10 DUP(?)    ;dichiara 10 variabili non inizializzate partendo
                             dall'indirizzo bytes.
 
-arr	    DD 100 DUP(0)   ;dichiara 100 variabile inizializzate a 100 grandi
+arr     DD 100 DUP(0)   ;dichiara 100 variabile inizializzate a 100 grandi
                             4 byte ciascuna, partendo dall'indirizzo arr.
 
 str     DB 'hello',0    ;dichiara 6 byte contenenti ciascuno il codice
