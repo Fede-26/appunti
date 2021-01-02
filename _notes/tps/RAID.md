@@ -1,3 +1,10 @@
+---
+title: RAID
+tags: Dischi
+toc: true
+season: winter
+---
+
 # Definizione
 RAID significa (Redundant Array of Inexpensive Disks / Redundant Array of Indipendent Disks).
 
