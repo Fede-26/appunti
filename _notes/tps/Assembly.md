@@ -1,6 +1,6 @@
 ---
 title: Assembly
-tags: Assembly, Registri, CPU
+tags: Assembly,Registri,CPU
 toc: true
 season: winter
 ---
@@ -25,14 +25,14 @@ La dichiarazione di variabili statiche deve essere preceduta da `.DATA` e per di
 ```x86asm
 .DATA
  
-var  DB 64	;dichiara una variabile grande un byte all'indirizzo var
-				e assegna il valore 64.
+var  DB 64  ;dichiara una variabile grande un byte all'indirizzo var
+                e assegna il valore 64.
  
-var2 DW ?	;dichiara una variabile grande due byte all'indirizzo var2
-				ma non assegna nessun valore.
+var2 DW ?   ;dichiara una variabile grande due byte all'indirizzo var2
+                ma non assegna nessun valore.
  
-     DB 10	;dichiara una variabile grande un byte senza nome,
-	 			all'indirizzo var2+1 e assegna il valore 10.
+     DB 10  ;dichiara una variabile grande un byte senza nome,
+                all'indirizzo var2+1 e assegna il valore 10.
 ```
 
 ## Array
@@ -44,18 +44,18 @@ L'istruzione `DUP` ripete un valore per un determinato numero di volte: `4 DUP(2
 ```x86asm
 .DATA
 
-Z		DD 1, 2, 3		;dichiara 3 variabili da 4 byte ciascuna,
-							le inizializza con 1, 2 e 3 rispettivamente.
-							Il valore di Z+8 sarà 3.
+Z       DD 1, 2, 3      ;dichiara 3 variabili da 4 byte ciascuna,
+                            le inizializza con 1, 2 e 3 rispettivamente.
+                            Il valore di Z+8 sarà 3.
 
-bytes	DB 10 DUP(?)	;dichiara 10 variabili non inizializzate partendo
-							dall'indirizzo bytes.
+bytes   DB 10 DUP(?)    ;dichiara 10 variabili non inizializzate partendo
+                            dall'indirizzo bytes.
 
-arr		DD 100 DUP(0)	;dichiara 100 variabile inizializzate a 100 grandi
-							4 byte ciascuna, partendo dall'indirizzo arr.
+arr	    DD 100 DUP(0)   ;dichiara 100 variabile inizializzate a 100 grandi
+                            4 byte ciascuna, partendo dall'indirizzo arr.
 
-str		DB 'hello',0	;dichiara 6 byte contenenti ciascuno il codice
-							ASCII della lettera corrispondente e uno 0.
+str     DB 'hello',0    ;dichiara 6 byte contenenti ciascuno il codice
+                            ASCII della lettera corrispondente e uno 0.
 ```
 
 
@@ -79,27 +79,27 @@ I parametri possibili sono:
 
 ### Esempi
 ```x86asm
-MOV EAX, [EBX]			;copia i 4 byte in memoria all'indirizzo
-							contenuto in EBX in EAX.
+MOV EAX, [EBX]          ;copia i 4 byte in memoria all'indirizzo
+                            contenuto in EBX in EAX.
 
-MOV [var], EBX			;copia i il contenuto di EBX nello spazio di
-							memoria all'indirizzo var grande 4 byte.
+MOV [var], EBX          ;copia i il contenuto di EBX nello spazio di
+                            memoria all'indirizzo var grande 4 byte.
 
-MOV EAX, [ESI-4]		;copia i 4 byte in memoria all'indirizzo
-							contenuto in ESI+(-4) in EAX.
+MOV EAX, [ESI-4]        ;copia i 4 byte in memoria all'indirizzo
+                            contenuto in ESI+(-4) in EAX.
 
-MOV [ESI+EAX], CL		;copia il contenuto di CL all'indirizzo di
-							memoria ESI+EAX.
+MOV [ESI+EAX], CL       ;copia il contenuto di CL all'indirizzo di
+                            memoria ESI+EAX.
 
-MOV EDX, [ESI+4*EBX]	;copia i 4 byte in memoria all'indirizzo
-							ESI+(4*EBX) in EDX.
+MOV EDX, [ESI+4*EBX]    ;copia i 4 byte in memoria all'indirizzo
+                            ESI+(4*EBX) in EDX.
 ```
 
 Alcune sintassi invalide:
 ```x86asm
-MOV EAX, [EBX-ECX]		;si possono solo sommare due registri.
+MOV EAX, [EBX-ECX]      ;si possono solo sommare due registri.
 
-MOV [EAX+ESI+EDI], EBX	;si possono sommare massimo due registri.
+MOV [EAX+ESI+EDI], EBX  ;si possono sommare massimo due registri.
 ```
 
 ### Specificare la grandezza
@@ -111,13 +111,13 @@ Per specificare la grandezza dei valori da copiare nel caso ci siano ambiguità 
 
 #### Esempi
 ```x86asm
-MOV BYTE PTR [EBX], 2	;copia 2 in un singolo byte all'indirizzo in EBX.
+MOV BYTE PTR [EBX], 2   ;copia 2 in un singolo byte all'indirizzo in EBX.
 
-MOV WORD PTR [EBX], 2	;copia la rappresentazione a 16-bit di 2 in
-							2 byte partendo dall'indirizzo in EBX.
+MOV WORD PTR [EBX], 2   ;copia la rappresentazione a 16-bit di 2 in
+                            2 byte partendo dall'indirizzo in EBX.
 
-MOV DWORD PTR [EBX], 2	;copia la rappresentazione a 32-bit di 2 in
-							4 byte partendo dall'indirizzo in EBX.
+MOV DWORD PTR [EBX], 2  ;copia la rappresentazione a 32-bit di 2 in
+                            4 byte partendo dall'indirizzo in EBX.
 ```
 
 ## PUSH
@@ -140,10 +140,10 @@ I parametri possibili sono:
 
 ### Esempi
 ```x86asm
-PUSH EAX	;aggiunge EAX allo stack.
+PUSH EAX    ;aggiunge EAX allo stack.
 
-PUSH [var]	;aggiunge il valore contenuto di 4 byte all'indirizzo
-				var allo stack.
+PUSH [var]  ;aggiunge il valore contenuto di 4 byte all'indirizzo
+                var allo stack.
 ```
 
 
@@ -163,10 +163,10 @@ I parametri possibili sono:
 
 ### Esempi
 ```x86asm
-POP EDI		;rimuove l'ultimo valore dello stack e lo copia in EDI.
+POP EDI     ;rimuove l'ultimo valore dello stack e lo copia in EDI.
 
-POP [EBX]	;rimuove l'ultimo valore dello stack e lo copia in memoria
-				all'indirizzo in EBX.
+POP [EBX]   ;rimuove l'ultimo valore dello stack e lo copia in memoria
+                all'indirizzo in EBX.
 ```
 
 
@@ -180,10 +180,10 @@ I parametri possibili sono:
 
 ### Esempi
 ```x86asm
-LEA EDI, [EBX+4*ESI]	;l'indirizzo della variabile all'indirizzo
-							EBX+4*ESI viene copiato in EDI
+LEA EDI, [EBX+4*ESI]    ;l'indirizzo della variabile all'indirizzo
+                            EBX+4*ESI viene copiato in EDI
 
-LEA EAX, [var]			;l'indirizzo della variabile var viene copiato in EAX
+LEA EAX, [var]          ;l'indirizzo della variabile var viene copiato in EAX
 ```
 
 ### Differenze con MOV
@@ -207,7 +207,7 @@ Memoria:
 
 Programma:
 ```x86asm
-LEA EAX, [EBX+8]	;EAX conterrà 0x00403A48
+LEA EAX, [EBX+8]    ;EAX conterrà 0x00403A48
 
-MOV EAX, [EBX+8]	;EAX conterrà 0x0012C140
+MOV EAX, [EBX+8]    ;EAX conterrà 0x0012C140
 ```

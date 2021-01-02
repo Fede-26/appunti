@@ -8,8 +8,11 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "_notes/tps/Sistemi operativi.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -46,8 +49,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -67,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_notes/tps/Sistemi operativi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,13 +97,13 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "_notes/tps/Sistemi operativi.md",
+    "_notes/tps/Processore.md",
+    "_notes/tps/Assembly.md",
     "_notes/How-to-setup-this-site.md",
     "_notes/Obsidian integration.md",
     "_notes/How to use the special features.md",
     "_notes/how-markdown-is-rendered.md",
-    "_notes/tps/Sistemi operativi.md",
-    "_notes/tps/Processore.md",
-    "_notes/tps/Assembly.md",
     "_notes/Untitled.md",
     "dates.md",
     "about.md"
