@@ -5,7 +5,7 @@ toc: true
 season: winter
 ---
 
-# Dispositivi di memoria
+# Dispositivi di memoria secondari
 ## Dischi magnetici
 ## Dischi IDE
 ## Dischi SCSI
@@ -16,5 +16,3 @@ season: winter
 ## CD-Rewritable
 ## DVD
 ## Blu-ray
-
-# Struttura del processore
