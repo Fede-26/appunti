@@ -8,8 +8,11 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "_notes/tps/Processore.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -66,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_notes/tps/Processore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,12 +97,12 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "_notes/tps/Processore.md",
+    "_notes/tps/RAID.md",
     "_notes/tps/Sistemi operativi.md",
     "_notes/tps/Input-Output.md",
-    "_notes/tps/Processore.md",
     "_notes/Untitled.md",
     "_notes/tps/Assembly.md",
-    "_notes/tps/RAID.md",
     "tags.md",
     "README.md",
     "notes.md",

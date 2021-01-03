@@ -24,7 +24,7 @@ A seconda del tipo di sistema operativo il kernel può inglobare altre parti o f
 
 Un kernel tradizionale, detto monolitico, integra dentro di sé la gestione della memoria virtuale, la CPU, lo scheduler e i gestori di file system, nonché i driver necessari per il controllo di tutte le periferiche collegate.
 
-[Modalità di operazione](Processore#Modalit%C3%A0%20di%20operazione)
+[Modalità di operazione](Processore#Modalit%C3%A0-di-operazione)
 
 
 # La shell
