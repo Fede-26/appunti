@@ -8,11 +8,8 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "_notes/tps/Sistemi operativi.md",
-            "mode": "source"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -69,7 +66,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/tps/Sistemi operativi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,14 +94,14 @@
   },
   "lastOpenFiles": [
     "_notes/tps/Sistemi operativi.md",
-    "_notes/tps/RAID.md",
-    "_notes/tps/Assembly.md",
+    "_notes/tps/Input-Output.md",
     "_notes/tps/Processore.md",
-    "assets/img/screenshot.png",
-    "assets/img/profile.png",
-    "assets/img/new notes pref.png",
-    "assets/img/fork_button.jpg",
-    "assets/img/favicon.png",
-    "assets/img/tps/Pasted image 20210102181316.png"
+    "_notes/Untitled.md",
+    "_notes/tps/Assembly.md",
+    "_notes/tps/RAID.md",
+    "tags.md",
+    "README.md",
+    "notes.md",
+    "dates.md"
   ]
 }
