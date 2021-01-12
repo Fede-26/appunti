@@ -211,3 +211,26 @@ LEA EAX, [EBX+8]    ;EAX conterrà 0x00403A48
 
 MOV EAX, [EBX+8]    ;EAX conterrà 0x0012C140
 ```
+
+
+# Istruzioni aritmetiche e logiche
+
+## ADD
+L'istruzione `ADD` somma i 2 operandi e scrive il risultato nel primo operando.
+
+Equivale al `+=` di C.
+
+### Sintassi
+I parametri possibili sono:
+- `add <reg>, <reg>`
+- `add <reg>, <mem>`
+- `add <mem>, <reg>`
+- `add <reg>, <con>`
+- `add <mem>, <con>`
+
+### Esempi
+```nasm
+add EAX, 10             ;EAX = EAX + 10
+
+add BYTE PTR [var], 10  ;aggiunge 10 al byte var in memoria
+```

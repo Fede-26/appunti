@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_notes/tps/Processore.md",
+            "file": "_notes/tps/Assembly.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/tps/Processore.md",
+                "file": "_notes/tps/Assembly.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,12 +84,12 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "useHierarchy": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -97,12 +97,12 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "_notes/tps/Processore.md",
-    "_notes/tps/RAID.md",
+    "_notes/tps/Assembly.md",
     "_notes/tps/Sistemi operativi.md",
+    "_notes/tps/RAID.md",
+    "_notes/tps/Processore.md",
     "_notes/tps/Input-Output.md",
     "_notes/Untitled.md",
-    "_notes/tps/Assembly.md",
     "tags.md",
     "README.md",
     "notes.md",
