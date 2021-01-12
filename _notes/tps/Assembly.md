@@ -234,3 +234,63 @@ add EAX, 10             ;EAX = EAX + 10
 
 add BYTE PTR [var], 10  ;aggiunge 10 al byte var in memoria
 ```
+
+## SUB
+L'istruzione `sLB` sottrae i 2 operandi e scrive il risultato nel primo operando.
+
+Equivale al `-=` di C.
+
+### Sintassi
+I parametri possibili sono:
+- `sub <reg>, <reg>`
+- `sub <reg>, <mem>`
+- `sub <mem>, <reg>`
+- `sub <reg>, <con>`
+- `sub <mem>, <con>`
+
+### Esempi
+```nasm
+sub AL, AH      ;AL = AL - AH
+
+add EAX, 216    ;sottrae 216 da EAX
+```
+
+## INC/DEC
+L'istruzione `INC` incrementa l'operando di 1.
+L'istruzione `DEC` decrementa l'operando di 1.
+
+Equivale al `++`/`--` di C.
+
+### Sintassi
+I parametri possibili sono:
+- `inc <reg>`
+- `inc <mem>`
+- `dec <reg>`
+- `dec <mem>`
+
+### Esempi
+```nasm
+dec EAX             ;EAX = EAX + 10
+
+inc DWORD PTR [var] ;aggiunge 10 al byte var in memoria
+```
+
+## IMUL
+L'istruzione `IMUL` ha 2 modalità di operazione:
+
+- Con 2 operandi, essi vengono moltiplicati e scritti nel primo;
+- Con 3 operandi, il secondo e il terzo vengono moltiplicati e il prodotto viene scritto nel primo.
+
+### Sintassi
+I parametri possibili sono:
+- `imul <reg32>, <reg32>`
+- `imul <reg32>, <mem>`
+- `imul <reg32>, <reg32>, <con>`
+- `imul <reg32>, <mem>, <con>`
+
+### Esempi
+```nasm
+imul EAX, [var]     ;EAX = EAX * var
+
+imul ESI, EDI, 25   ;ESI = EDI * 25
+```
