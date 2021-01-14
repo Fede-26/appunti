@@ -58,10 +58,10 @@ str     DB 'hello',0    ;dichiara 6 byte contenenti ciascuno il codice
                         ;   ASCII della lettera corrispondente e uno 0.
 ```
 
-
 # Istruzioni di movimento dati
 
 ## MOV
+
 I processori x86 possono indirizzare fino a $2^{32}$ byte di memoria
 Oltre a supportare gli indirizzamenti tramite nomi delle variabili, è possibile sommare fino a 2 registri (32-bit) con una costante (signed 32-bit).
 Un registro può essere inoltre moltiplicato per 2, 4 o 8.
