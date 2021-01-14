@@ -236,7 +236,7 @@ add BYTE PTR [var], 10  ;aggiunge 10 al byte var in memoria
 ```
 
 ## SUB
-L'istruzione `sLB` sottrae i 2 operandi e scrive il risultato nel primo operando.
+L'istruzione `SUB` sottrae i 2 operandi e scrive il risultato nel primo operando.
 
 Equivale al `-=` di C.
 
