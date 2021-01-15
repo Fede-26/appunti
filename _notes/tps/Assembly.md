@@ -5,8 +5,8 @@ toc: true
 season: winter
 ---
 
-
 # I registri
+
 I moderni processori x86 possiedono 8 registri da 32-bit general puprose.
 
 ![registri-20210102121903](../../assets/img/tps/registri-20210102121903.png)
