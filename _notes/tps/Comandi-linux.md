@@ -2,6 +2,7 @@
 title: Comandi comuni in linux
 date: 2021-01-15T15:15:21+01:00
 draft: false
+toc: true
 ---
 
 # Introduzione
