@@ -1,8 +1,7 @@
 ---
 title: Comandi comuni in linux
-tags: Tps,Linux,Shell,Terminale
-toc: true
-season: winter
+date: 2021-01-15T15:15:21+01:00
+draft: false
 ---
 
 # Introduzione
@@ -10,6 +9,8 @@ season: winter
 Nei sistemi basati su unix, il terminale è il programma che ci permette di visualizzare a video una shell (generalmente bash, ma può essere anche sh, zsh, chs, fish). È lei che gestisce i comandi e ci permette di eseguirli.
 
 Va inoltre notato che linux, a differenza di windows, è case-sensitive, cioè differenzia le maiuscole con le minuscole. Quindi un file chiamato `testo` sarà diverso da un file chiamato `TeStO`.
+
+Non vengono utilizzate le estensioni, perché il tipo di file viene definito all'interno di esso.
 
 ## Argomenti di un comando
 
@@ -54,13 +55,13 @@ Tutte le cartelle partono dalla _root directory_, ovvero `/`, e per rappresentar
 
 Per esempio la cartella `documenti` nella home dell'utente `giulio` (`/home/giulio/`) avrà come percorso:
 
-```
+```bash
 /home/giulio/documenti
 ```
 
 Ma se ci si troverà già nella home, il percorso potrà essere espresso in modo relativo come:
 
-```
+```bash
 documenti
 ```
 
@@ -106,7 +107,7 @@ ls /home/giulio
 
 Se invocato senza argomento utilizza la directory attuale.
 
-### -R
+### --recursive / -R
 
 ```bash
 ls -R
@@ -114,7 +115,7 @@ ls -R
 
 Visualizza il contenuto delle sottodirectory in modo ricorsivo.
 
-### -a
+### --all / -a
 
 ```bash
 ls -a
@@ -130,7 +131,7 @@ ls -l
 
 Visualizza informazioni aggiuntive riguardanti i file.
 
-Con `-h` le dimensioni saranno rappresentate con una scala adeguata e non in byte.
+Con `--human`/`-h` le dimensioni saranno rappresentate con una scala adeguata e non in byte.
 
 ## pwd
 
@@ -146,6 +147,263 @@ cd /home/giulio/documenti
 
 Se non viene fornito un percorso utilizza la cartella home.
 
-# Lavorare con i file
+## mount
+
+Il comando `mount` permette di montare un filesystem in una directory del sistema.
+
+```bash
+mount /dev/sda1 /mnt
+```
+
+È possibile specificare le directory di default nel file `/etc/fstab`, compreso se eseguire l'auto-mount.
+
+# Lavorare con file e cartelle
+
+## cp
+
+Copia un file.
+
+```bash
+cp testo.txt copiaTesto.txt
+```
+
+
+
+## mv
+
+Muove un file.
+
+```bash
+mv testo.txt nuovoTesto.txt
+```
+
+
+
+## rm
+
+Rimuove permanentemente un file.
+
+```bash
+rm testo.txt
+```
+
+
+
+### --recursive / -r / -R
+
+Viene utilizzato per rimuovere una directory.
+
+```bash
+rm -r cartella
+```
+
+
+
+## touch
+
+Il comando `touch` permette di creare un file vuoto in una directory.
+
+```bash
+touch testo.txt
+```
+
+Come per ogni comando è possibile specificare un percorso assoluto:
+
+```bash
+touch /home/giulio/testo.txt
+```
+
+
+
+## mkdir
+
+Il comando `mkdir` viene usato per creare una directory.
+
+```bash
+mkdir cartella
+```
+
+### --parents / -p
+
+Con il parametro `-p` le cartelle superiori vengono create se non esistono.
+
+Se per esempio vogliamo creare una cartella `/home/giulio/documenti/cartella`, ma la cartella `documenti` non esiste, è possibile crearla automaticamente con `-p`.
+
+## chmod
+
+Per cambiare i permessi di lettura, scrittura ed esecuzione di un file o cartella si può utilizzare il comando `chmod`.
 
 **TODO: finire**
+
+## chown
+
+Ogni file o cartella ha un utente proprietario e un gruppo proprietario.
+
+Per modificarli si utilizza il comando `chown`.
+
+**TODO: finire**
+
+# Gestione pacchetti
+
+**TODO: finire**
+
+## apt
+
+## pacman
+
+# Programmi utili
+
+## dmesg
+
+Visualizza i log del kernel.
+
+## ip
+
+Visualizza e modifica le proprietà delle interfacce di rete.
+
+### address
+
+Con il parametro `address` è possibile visualizzare gli indirizzi ip e MAC.
+
+```bash
+ip address
+```
+
+Questo parametro può essere abbreviato fino ad `a`.
+
+```bash
+ip a
+```
+
+
+
+## ssh
+
+Permette di connettersi ad un server remoto via ssh.
+
+```bash
+ssh giulio@pc.local
+```
+
+Se il nome utente non viene specificato viene utilizzato quello dell'utente che esegue il comando.
+
+### -p
+
+È possibile specificare la porta del server con il parametro `-p`.
+
+```bash
+ssh -p 2222 giulio@pc.local
+```
+
+La porta utilizzata normalmente è la 22.
+
+## scp
+
+`scp` permette di copiare file da un computer all'altro tramite il protocollo ssh.
+
+La sintassi è identica a `cp`, il file remoto (sorgente o destinazione che sia) va preceduto da `utente@hostname:`.
+
+Esempio di copia di un file locale a una macchina chiamata `server`:
+
+```bash
+scp file.txt giulio@server.local:file.txt
+```
+
+## clear
+
+Pulisce l'output della console.
+
+Può essere utilizzata la scorciatoia `Ctrl + l`.
+
+## exit
+
+Esce dalla sessione attuale.
+
+Può essere utilizzata la scorciatoia `Ctrl + d`.
+
+## su
+
+Permette di cambiare utente attuale:
+
+```bash
+su franco
+```
+
+Se non viene specificato nessun utente viene utilizzato quello di root.
+
+## sudo
+
+Permette di eseguire un comando come utente root.
+
+```bash
+sudo cp file.txt testo.txt
+```
+
+## halt / poweroff / shutdown
+
+Per spegnere il sistema si possono utilizzare molti comandi, alcuni dei quali:
+
+- **halt**
+- **poweroff**
+- **shutdown now**
+
+## free
+
+Visualizza la memoria (RAM) libera.
+
+Con `--human`/`-h` verrà utilizzata una scala adeguata.
+
+## top
+
+Visualizza una tabella che mostra le risorse del sistema e i processi in esecuzione.
+
+Una versione più avanzata è `htop`.
+
+## ps
+
+Riporta i processi attuali.
+
+Per vedere i processi nel sistema utilizzare i parametri `aux`.
+
+## pstree
+
+Riporta un albero dei processi.
+
+## uptime
+
+Riporta il tempo passato dall'accensione del sistema.
+
+## fdisk
+
+Utility per visualizzare i dettagli delle partizioni ed eventualmente formattarle, crearle ed eliminarle.
+
+## lsblk
+
+Mostra i dispositivi di archiviazione connessi e le rispettive partizioni.
+
+## id
+
+Visualizza l'id dell'utente e dei gruppi a cui appartiene.
+
+```bash
+id giulio
+```
+
+
+
+## nano
+
+Editor di testo molto semplice.
+
+# TODO
+
+**TODO: finire**
+
+```
+raspi-config
+lscpu
+
+cat
+gcc
+```
+
