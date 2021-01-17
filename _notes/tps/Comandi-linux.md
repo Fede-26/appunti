@@ -248,7 +248,47 @@ Per modificarli si utilizza il comando `chown`.
 
 **TODO: finire**
 
+In linux i programmi vengono installati tramite pacchetti. A seconda delle distribuzioni sono presenti dei gestori pacchetti diversi.
+
 ## apt
+
+`apt` è il gestore pacchetti delle distribuzioni basate su Debian, come Ubunto, Mint ed altre.
+
+### update
+
+Per aggiornare la lista dei repository:
+
+```bash
+apt update
+```
+
+
+
+### upgrade
+
+Per aggiornare i pacchetti installati:
+
+```bash
+apt upgrade
+```
+
+### search
+
+Per cercare i pacchetti nei repository:
+
+```bash
+apt search
+```
+
+### install
+
+Per installare un pacchetto:
+
+```bash
+apt install
+```
+
+
 
 ## pacman
 
