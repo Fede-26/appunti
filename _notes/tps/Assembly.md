@@ -294,3 +294,34 @@ imul EAX, [var]     ;EAX = EAX * var
 
 imul ESI, EDI, 25   ;ESI = EDI * 25
 ```
+
+
+
+# Istruzioni per il controllo del flusso
+
+## label
+
+Si possono utilizzare delle etichette per identificare un'istruzione univoca.
+
+### Esempi
+
+```nasm
+begin: mov EAX, [ESI]
+```
+
+## JMP
+
+L'istruzione `JMP` (_jump_) permette di saltare ad una istruzione tramite la sua etichetta.
+
+### Sintassi
+
+I parametri possibili sono:
+
+- `jmp <label>`
+
+### Esempi
+
+```nasm
+jmp begin
+```
+
