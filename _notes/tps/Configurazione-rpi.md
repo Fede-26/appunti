@@ -7,7 +7,6 @@ Season: winter
 
 # Configurazione base rPi
 
-- flashare l'immagine
 - aprire la partizione `boot`
 - aprire il terminale con tasto destro nella cartella
 - `sudo touch ssh`
