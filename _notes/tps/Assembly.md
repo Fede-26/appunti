@@ -297,6 +297,32 @@ imul ESI, EDI, 25   ;ESI = EDI * 25
 
 
 
+## IDIV
+
+L'istruzione IDIV divide i 64 bit contenuti in `EDX:EAX` l'operando datogli e restituisce:
+
+- In `EAX` il risultato della divisione;
+
+- In `EDX` il resto della divisione.
+
+    ### Sintassi
+
+I parametri possibili sono:
+
+- `idiv <reg32>`
+- `idiv <mem>`
+
+### Esempi
+
+```nasm
+idiv EBX	;EAX = EDX:EAX / EBX
+			;EDX = EDX:EAX % EBX
+```
+
+
+
+
+
 # Istruzioni per il controllo del flusso
 
 ## label
@@ -323,5 +349,45 @@ I parametri possibili sono:
 
 ```nasm
 jmp begin
+```
+
+## CMP
+
+L'istruzione `CMP` compara i due valori, viene utilizzata prima di una jump condizionata.
+
+### Sintassi
+
+I parametri possibili sono:
+
+- `cmp <reg32>, <reg32>`
+- `cmp <reg32>, <mem>`
+- `cmp <mem>, <reg32>`
+- `cmp <reg32>, <con>`
+
+### Esempi
+
+```nasm
+cmp EAX, [var]
+```
+
+## jump condizionata
+
+Queste istruzioni vengono utilizzate dopo `CMP` e saltano ad un etichetta se la condizione è verificata.
+
+### Sintassi
+
+- je <label> (jump when equal)
+- jne <label> (jump when not equal)
+- jz <label> (jump when last result was zero)
+- jg <label> (jump when greater than)
+- jge <label> (jump when greater than or equal to)
+- jl <label> (jump when less than)
+- jle <label> (jump when less than or equal to)
+
+### Esempi
+
+```nasm
+cmp EAX, EBX
+jle begin
 ```
 
