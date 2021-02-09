@@ -391,3 +391,45 @@ cmp EAX, EBX
 jle begin
 ```
 
+# Appunti personali
+
+## Vettori
+
+I vettori vengono chiamati buffer.
+Vengono definiti come blocchi di memoria (senza spazi in mezzo).
+
+Assembly considera ogni elemento come un byte (dimensione cella di memoria).
+Spiazzamento = distanza di un elemento dall'inizio del buffer.
+È necessario sapere dove inizia il buffer e quale elemenot bisogna accedere.
+
+Se il buffer inizia all'indirizzo 435 e ci interessa trovare l'indirizzo del 23 elemento, è necessario fare: 435+23.
+
+Se la grandezza dell'elemento è di 4 byte, bisogna moltiplicare il suo indice per 4: 43+(23*4).
+
+Fare riferimento alla sezione dichiarazione variabili sopracitata.
+
+Base del buffer = inizio del buffer.
+Per ottenerla:
+```nasm
+lea [vettore]
+```
+
+#### Tipo di un vettore
+
+esempio
+
+```c
+#include <stdio.h>
+int v[10];
+
+int main()
+{
+	v[0] = 0;
+	printf("%i %i %i %i\n", v, &v[0], &v[1], &v[2]);
+}
+```
+
+L'indirizzo di memoria del vettore equivale all'indirizzo del primo elemento.
+
+Il tipo di `v` è `int *`.
+
