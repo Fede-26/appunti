@@ -16,7 +16,7 @@ Season: winter
 - aggiungere
 
 ```
-contry=IT
+country=IT
 
 network={
 	ssid="NOME RETE"
